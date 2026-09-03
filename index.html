@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>To-Do App — MySQL</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main class="app">
+  <h1>To-Do</h1>
+  <p class="sub">DB: <code>todo</code> @ 127.0.0.1:3306 • tabel <code>todos</code> • juga sinkron ke <code>laravel</code>.todos</p>
+  <div id="status" class="status">connecting…</div>
+
+  <form id="form" class="add-row">
+    <input id="input" type="text" placeholder="What needs to be done?" autocomplete="off" maxlength="255" />
+    <button type="submit">Add</button>
+  </form>
+
+  <div class="toolbar">
+    <div class="filters" role="tablist">
+      <button data-filter="all" class="filter active">All <span id="count-all"></span></button>
+      <button data-filter="active" class="filter">Active <span id="count-active"></span></button>
+      <button data-filter="completed" class="filter">Completed <span id="count-completed"></span></button>
+    </div>
+    <button id="clear-completed" class="ghost">Clear completed</button>
+  </div>
+
+  <ul id="list" class="list"></ul>
+
+  <div class="footer">
+    <span id="left-count"></span>
+    <span class="hint">Enter to add • klik teks untuk edit • Enter save, Esc cancel</span>
+  </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
